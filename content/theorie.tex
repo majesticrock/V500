@@ -17,7 +17,16 @@ Hierzu wird von einer Korpuskeltheorie ausgegangen, bei der sich die Energie ein
 
 berechnet. Dabei ist $h$ das Planck'sche Wirkungsquantum und $\nu$ die Frequenz des Lichtes.
 
-Zur Untersuchung des Photoeffekts werden zwei Elektroden im Vakuum gegenüber gestellt.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.95\textwidth]{content/schem-aufbau.png}
+  \caption{Schematischer Aufbau der Versuchsapperatur zur Untersuchung des Photoeffekts \cite{V500}.}
+  \label{fig:schem-aufbau}
+\end{figure}
+
+
+Zur Untersuchung des Photoeffekts werden zwei Elektroden im Vakuum, wie in \autoref{fig:schem-aufbau} zu sehen, gegenüber gestellt.
 Die Photokathode wird anschließend mit monochromatischen Licht beschossen.
 Dies sorgt dafür, dass sich Elektronen aus dem Material lösen.
 Es stellt sich heraus, dass die Elektronenanzahl pro Zeitintervall proportional zu der Intensität des Lichtes und die Elektronenenergie abhängig von der Frequenz des Lichtes ist.
@@ -31,6 +40,14 @@ Aus dem Zusammenhang
 
 bei dem $A_\text{k}$ die Austrittsarbeit der Elektronen aus dem Material ist,
 folgt, dass es eine Mindestfrequenz des Lichtes geben muss, unter der kein Photostrom zu messen ist.
+Wenn nun eine beschleunigende Spannung $U$ angelegt wird, sodass
+
+\begin{equation}
+    \label{eqn:besch}
+    h \nu + e U \geq A_\text{k}
+\end{equation}
+
+gilt, kann dennoch ein Strom gemessen werden. Dabei ist $e$ die Elementarladung.
 
 Des Weiteren wird während des Vorgangs ein einzelnes wechselwirkendes Photon vollständig annihiliert.
 Seine gesamte Energie wird an das Elektron übertragen.
@@ -40,16 +57,30 @@ dass die Elektronen in jenem bereits eine gewissen Energie zwischen $0$ und der 
 welche statistisch verteilt ist. Dabei kann $\chi$ einige Elektronenvolt groß sein.
 
 Zur Bestimmung eben jener kinetischen Energie wird die sogenannte Gegenfeldmethode genutzt.
-Dazu wird an der Anode eine Gegenspannung $U_\text{G}$ angelegt, welche die Elektronen abbremst.
-Diese erreichen die Elektrode nun auschließlich, wenn ihre Energie größer als $e U_\text{G}$ ist.
+Dazu wird an der Anode eine Gegenspannung $U$ angelegt, welche die Elektronen abbremst.
+Diese erreichen die Elektrode nun auschließlich, wenn ihre Energie größer als $e U$ ist.
 Also verschwindet der gemessene Strom an der Anode, wenn
 
 \begin{equation}
     \label{eqn:gegenfeld}
-    e U_\text{G} = \frac{1}{2} m_\text{e} v_\text{max}^2
+    e U = \frac{1}{2} m_\text{e} v_\text{max}^2
 \end{equation}
 
-erfüllt ist, wobei $e$ die Elementarladung, $m_\text{e}$ die Elektronenmasse und $v_\text{max}$ die maximale Geschwindigkeit der Elektronen ist.
+erfüllt ist, wobei $m_\text{e}$ die Elektronenmasse und $v_\text{max}$ die maximale Geschwindigkeit der Elektronen ist.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.95\textwidth]{content/brems-photo.png}
+  \caption{Der Photostrom einer mit monochromatischen Licht bestrahlten Photozelle aufgetragen gegen die Bremsspannung \cite{V500}.}
+  \label{fig:brems-photo}
+\end{figure}
 
 Des Weiteren ist aufgrund der oben erwähnten Fermi-Dirac-Verteilung zu bemerken, dass der Elektronenstrom bei einer bestimmten Spannung $U$ nicht auf 0 abfällt,
-sondern sich bereits vorher dieser annähert.
+sondern sich bereits vorher dieser annähert. Die zu erwartende Kurve ist in \autoref{fig:brems-photo} zu sehen.
+
+Des Weiteren gilt unter bestimmten Voraussetzungen ein parabolischer Zusammenhang zwischen dem Photostrom $I_\text{Ph}$ und $U$:
+
+\begin{equation}
+    \label{eqn:i-u}
+    I_\text{Ph} \propto U^2.
+\end{equation}
