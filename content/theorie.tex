@@ -1,6 +1,55 @@
 \section{Zielsetzung}
 
-
+In diesem Versuch sollen die Eigenschaften des Photoeffekts untersucht werden,
+also die Frequenzabhängigkeit und Intensitätsunabhängigkeit der Elektronen Energie,
+beim Austritt aus beschienenem Metall.
 
 \section{Theorie}
 \label{sec:Theorie}
+
+Der Photostrom, welcher entsteht, wenn Metall mit Licht beschossen wird, kann nicht mit dem Wellenbild der klassischen Elektrodynamik erklärt werden.
+Hierzu wird von einer Korpuskeltheorie ausgegangen, bei der sich die Energie eines Lichtteilchens, eines Photons, über
+
+\begin{equation}
+    \label{eqn:photon-energie}
+    E_\text{Photon} = h \nu
+\end{equation}
+
+berechnet. Dabei ist $h$ das Planck'sche Wirkungsquantum und $\nu$ die Frequenz des Lichtes.
+
+Zur Untersuchung des Photoeffekts werden zwei Elektroden im Vakuum gegenüber gestellt.
+Die Photokathode wird anschließend mit monochromatischen Licht beschossen.
+Dies sorgt dafür, dass sich Elektronen aus dem Material lösen.
+Es stellt sich heraus, dass die Elektronenanzahl pro Zeitintervall proportional zu der Intensität des Lichtes und die Elektronenenergie abhängig von der Frequenz des Lichtes ist.
+
+Aus dem Zusammenhang
+
+\begin{equation}
+    \label{eqn:elek-energie}
+    E_\text{kin} = h \nu - A_\text{k},
+\end{equation}
+
+bei dem $A_\text{k}$ die Austrittsarbeit der Elektronen aus dem Material ist,
+folgt, dass es eine Mindestfrequenz des Lichtes geben muss, unter der kein Photostrom zu messen ist.
+
+Des Weiteren wird während des Vorgangs ein einzelnes wechselwirkendes Photon vollständig annihiliert.
+Seine gesamte Energie wird an das Elektron übertragen.
+Dennoch stellt man fest, dass die kinetische Energie der Elektronen ein kontinuierliches Spektrum ist.
+Dies liegt an der Fermi-Dirac-Verteilung im Material selbst. Diese sagt aus,
+dass die Elektronen in jenem bereits eine gewissen Energie zwischen $0$ und der Fermie-Energie $\chi$ besitzen,
+welche statistisch verteilt ist. Dabei kann $\chi$ einige Elektronenvolt groß sein.
+
+Zur Bestimmung eben jener kinetischen Energie wird die sogenannte Gegenfeldmethode genutzt.
+Dazu wird an der Anode eine Gegenspannung $U_\text{G}$ angelegt, welche die Elektronen abbremst.
+Diese erreichen die Elektrode nun auschließlich, wenn ihre Energie größer als $e U_\text{G}$ ist.
+Also verschwindet der gemessene Strom an der Anode, wenn
+
+\begin{equation}
+    \label{eqn:gegenfeld}
+    e U_\text{G} = \frac{1}{2} m_\text{e} v_\text{max}^2
+\end{equation}
+
+erfüllt ist, wobei $e$ die Elementarladung, $m_\text{e}$ die Elektronenmasse und $v_\text{max}$ die maximale Geschwindigkeit der Elektronen ist.
+
+Des Weiteren ist aufgrund der oben erwähnten Fermi-Dirac-Verteilung zu bemerken, dass der Elektronenstrom bei einer bestimmten Spannung $U$ nicht auf 0 abfällt,
+sondern sich bereits vorher dieser annähert.
