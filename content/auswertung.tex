@@ -2,7 +2,7 @@
 \label{sec:Auswertung}
 Zur Bestimmung der Austrittsarbeit $A_{\symup{K}}$ und des Verhältnisses $\frac{h}{e_0}$ werden zunächst die Grenzspannungen $U_{\symup{g}}$
 der gemessenen Spektrallinien errechnet. Dazu werden die Wurzeln der gemessenen Stromstärken $I$ gegen die Gegenspannungen $U$ aufgetragen.
-Die dazu verwendeten Werte sind in \autoref{tab:tabelle1} bis \autoref{tab:tabelle6} aufgelistet. Für jede der ausgemessenen Spektrallinien wird mittels Python 3.7.0 Curve Fit
+Die verwendeten Werte sind in \autoref{tab:tabelle1} bis \autoref{tab:tabelle6} aufgelistet. Für jede der ausgemessenen Spektrallinien wird mittels Python 3.7.0 Curve Fit
 eine lineare Ausgleichsrechnung der Form 
 \begin{equation}
 \label{eqn:ausgleich1}
@@ -10,30 +10,30 @@ eine lineare Ausgleichsrechnung der Form
 \end{equation}
 durchgeführt. Die entsprechenden Fits sind in \autoref{fig:farben} zu sehen. Die Paramteter $a$ und $b$ ergeben sich jeweils zu 
 \begin{align*}
-  a_1 &= (-0,30 \pm 0,01) \, \frac{\sqrt{\symup{A}}}{\symup{V}} \\
-  b_1 &= (0,274 \pm 0,004) \, \sqrt{\symup{A}} \\
-  a_2 &= (-1,17 \pm 0,09) \, \frac{\sqrt{\symup{A}}}{\symup{V}} \\
-  b_2 &= (0,64 \pm 0,02) \,  \sqrt{\symup{A}} \\
-  a_3 &= (-1,49 \pm 0,09) \, \frac{\sqrt{\symup{A}}}{\symup{V}} \\
-  b_3 &= (1,03 \pm 0,02) \,  \sqrt{\symup{A}} \\
-  a_4 &= (-0,16 \pm 0,01) \, \frac{\sqrt{\symup{A}}}{\symup{V}} \\
-  b_4 &= (0,101 \pm 0,003) \,\sqrt{\symup{A}} \\
-  a_5 &= (-1,26 \pm 0,07) \, \frac{\sqrt{\symup{A}}}{\symup{V}} \\
-  b_5 &= (1,49 \pm 0,04) \,  \sqrt{\symup{A}} \\
-  a_6 &= (-0,64 \pm 0,03) \, \frac{\sqrt{\symup{A}}}{\symup{V}} \\
-  b_6 &= (0,86 \pm 0,02) \,  \sqrt{\symup{A}}. \\
+  a_{\symup{\lambda = 491,6 }} &= (-0,30 \pm 0,01) \, \frac{\sqrt{\symup{A}}}{\symup{V}} \\
+  b_{\symup{\lambda = 491,6 }} &= (0,274 \pm 0,004) \, \sqrt{\symup{A}} \\
+  a_{\symup{\lambda = 577,0 }} &= (-1,17 \pm 0,09) \, \frac{\sqrt{\symup{A}}}{\symup{V}} \\
+  b_{\symup{\lambda = 577,0 }} &= (0,64 \pm 0,02) \,  \sqrt{\symup{A}} \\
+  a_{\symup{\lambda = 546,0 }} &= (-1,49 \pm 0,09) \, \frac{\sqrt{\symup{A}}}{\symup{V}} \\
+  b_{\symup{\lambda = 546,0 }} &= (1,03 \pm 0,02) \,  \sqrt{\symup{A}} \\
+  a_{\symup{\lambda = 640}} &= (-0,16 \pm 0,01) \, \frac{\sqrt{\symup{A}}}{\symup{V}} \\
+  b_{\symup{\lambda = 640}} &= (0,101 \pm 0,003) \,\sqrt{\symup{A}} \\
+  a_{\symup{\lambda = 435,8 }} &= (-1,26 \pm 0,07) \, \frac{\sqrt{\symup{A}}}{\symup{V}} \\
+  b_{\symup{\lambda = 435,8 }} &= (1,49 \pm 0,04) \,  \sqrt{\symup{A}} \\
+  a_{\symup{\lambda = 404,7 }} &= (-0,64 \pm 0,03) \, \frac{\sqrt{\symup{A}}}{\symup{V}} \\
+  b_{\symup{\lambda = 404,7 }} &= (0,86 \pm 0,02) \,  \sqrt{\symup{A}}. \\
 \end{align*} 
-Zu erwähnen sei hierbei, dass die Nullmessung bei jedem Fit nicht beachtet wird, das diese wie in den Abbildungen zu sehen teilweise sehr 
+Zu erwähnen sei hierbei, dass die Nullmessung bei jedem Fit nicht beachtet wird, da diese wie in den Abbildungen zu sehen teilweise sehr 
 stark von den anderen Werten abweicht und diese Messung in der Durchführung bereits ungenau war.
 Die gesuchten Grenzspannungen $U_{\symup{g, i}}$ sind die Nullstellen der Fits an der Spannungsachse. Daher ergibt sich der Zusammenhang
-$U_{\symup{g, i}} = - \frac{b_{\symup{i}}}{a_{\symup{i}}}$, womit sich die Granzspannungen zu 
+$U_{\symup{g, i}} = - \frac{b_{\symup{i}}}{a_{\symup{i}}}$, womit sich die Grenzspannungen zu 
 \begin{align*}
-  U_1 &= (0,92 \pm 0,04) \, \symup{V} \\
-  U_2 &= (0,54 \pm 0,04) \, \symup{V} \\
-  U_3 &= (0,68 \pm 0,04) \, \symup{V} \\
-  U_4 &= (0,61 \pm 0,05) \, \symup{V} \\
-  U_5 &= (1,18 \pm 0,07) \, \symup{V} \\
-  U_6 &= (1,34 \pm 0,07) \, \symup{V} \\
+  U_{\symup{\lambda = 491,6}} &= (0,92 \pm 0,04) \, \symup{V} \\
+  U_{\symup{\lambda = 577,0}} &= (0,54 \pm 0,04) \, \symup{V} \\
+  U_{\symup{\lambda = 546,0}} &= (0,68 \pm 0,04) \, \symup{V} \\
+  U_{\symup{\lambda =640}} &= (0,61 \pm 0,05) \, \symup{V} \\
+  U_{\symup{\lambda = 435,8}} &= (1,18 \pm 0,07) \, \symup{V} \\
+  U_{\symup{\lambda = 404,7}} &= (1,34 \pm 0,07) \, \symup{V} \\
 \end{align*}
 ergeben.
 
@@ -59,7 +59,7 @@ ergeben.
   \begin{subfigure}{0.49\textwidth}
     \centering
     \includegraphics[width=0.98\textwidth]{build/rot.pdf}
-    \caption{Rot $\lambda = 614,9$ nm}
+    \caption{Rot $\lambda = 640$ nm}
   \end{subfigure}
 
   \begin{subfigure}{0.49\textwidth}
@@ -76,35 +76,35 @@ ergeben.
   \label{fig:farben}
 \end{figure}
 \input{../content/tabelle.tex}
-
+\input{../content/frequenz.tex}
 Zur Bestimmung des Verhältnisses $\frac{h}{e_0}$, sowie der Austrittsarbeit $A_{\symup{K}}$ werden die berechneten Grenzspannungen $U_{\symup{g}}$
-gegen die zugehörigen Frequenzen der Spektrallinien abgetragen. Diese sind in \autoref{tab:???} zu sehen. Die Frequenzen errechnen sich hierbei über 
+gegen die zugehörigen Frequenzen der Spektrallinien abgetragen. Diese sind in \autoref{tab:frequenz} zu sehen. Die Frequenzen errechnen sich hierbei über 
 \begin{equation}
 \label{eqn:frequenz}
   f = \frac{c}{\lambda},
 \end{equation}  
-wobei $c$ die Lichtgeschwindigkeit bezeichnet. Die benötigten Wellenlängen $\lambda$ sind den Angaben and er Apparatur entnommen beziehungsweise
-entstammen der jeweils angegebenen Quelle.
+wobei $c$ die Lichtgeschwindigkeit bezeichnet. Die benötigten Wellenlängen $\lambda$ sind den Angaben an der Apparatur entnommen. Hierbei ist zu bemerken, dass sich im Experiment Spektrallinien, welche nahe bei einander liegen, überlagern.
+Zur Auswertung wird hier jeweils die Wellenlänge verwendet, welche die höhere Intensität aufweist.
 Dabei wird eine lineare Ausgleichsrechung der Form
 \begin{equation}
   \label{eqn:ausgleich2}
-  U_{\symup{g}} = \frac{h}{e_0} + A_{\symup{K}}
+  U_{\symup{g}} = d \cdot f + b
 \end{equation}
 mittels Python 3.7.0 Curve Fit durchgeführt. Die abgetragenen Spannungen und der Fit sind in \autoref{fig:Grenzspannung} zu sehen.
 Die gesuchten Parameter ergeben sich damit zu 
 \begin{align*}
-  \frac{h}{e_0} &= (3,2 \pm 0,3) \cdot 10^{-15} \symup{eV} \\
-  A_{\symup{K}} &= (-1,0 \pm 0,2) \symup{eV}. \\
+  & \frac{h}{e_0} = d               = (3,0 \pm 0,4) \cdot 10^{-15} \symup{Vs} \\
+  & A_{\symup{K}} = \lvert b \rvert = (0,9 \pm 0,2) \symup{eV}. \\
 \end{align*}  
 
- %a7 = 3.422701591615602e-15+/-3.007801772128162e-16
-%b7 = -1.156772214105679+/-0.18225404834689737
 \begin{figure}
     \centering
     \includegraphics[width = 0.98\textwidth]{build/plot_ug.pdf}
     \caption{Auftragung der Grenzspannung $U_\text{g}$ gegen die Frequenz $\nu$ mit Ausgleichsgerade.}
     \label{fig:Grenzspannung}
 \end{figure}    
+
+
 
 Im letzten Versuchsteil wird das Verhalten des Photostroms bei einer Bremsspannung von $-20$ V bis $20$ V an der gelben Spektrallinie
 ($\lambda = 577$ nm) untersucht. Die gemessenen Werte sind in \autoref{tab:messung2} aufgelistet.
@@ -117,8 +117,22 @@ Der Plot dieser Werte ist in \autoref{fig:messung2} zu sehen.
     \label{fig:messung2}
 \end{figure}
 Wie zu sehen, konvergiert die Bremsspannungskurve bei hohen Beschleunigungsspannungen gegen einen Grenzwert. Dieser
-kann damit erklärt werden, dass nur 
-endlich viele Elektronen die Anode ereichen können, das heißt, dass beim Grenzwert annähernd alle Elektronen die Anode ereichen.
-Andererseits fällt der Strom bei höheren Bremspannungen als $U_{\symup{g}}$ nicht komplett auf 0 ab; stattdessen wird ein geringer 
-Gegenstrom erzeugt. Dieser lässt sich dadurch erklären, dass sich beim Kathodenmaterial schon bei Raumtemperatur Elektronen herauslösen 
-und teilweise dann auch von er Anode erfasst werden können. 
+kann damit erklärt werden, dass bei hohen Beschleunigungsspannungen
+annähernd alle Elektronen die Anode ereichen, die Kurve somit physikalisch gesehen nicht weiter ansteigen kann. Es können nicht mehr Elektronen 
+herausgelöst werden als es der Sättigungswert zulässt, da die Stromstärke proportional zur Lichtintensität ist, welche ebenfalls endlich ist. 
+Der tatsächliche Sättigungswert kann allerdings nicht erreicht werden, sondern nur asymptotisch angenähert werden. Dies liegt unter anderem daran,
+dass die Elektronen immer einer gewissen, wenn auch geringen Streuung unterworfen sind. Der Aufbau kann in dieser Hinsicht dadurch verbessert werden, 
+dass die Lichtquelle und die Photokathode in eine evakuierte kugelförmige Anode gebracht werden. Die Elektronen würden dadurch zwangsläufig 
+immer die Anode erreichen.
+ 
+Des Weiteren ist festzusetellen, dass der gemessene Photostrom bereits vor Erreichen der Grenzspannung $U_{\symup{g}}$ beginnt zu sinken.
+Das ist dadurch zu erklären, dass die herausgelösten Elektronen laut der Fermi-Dirac-Statistik ein Spektrum an verschiedenen Energien aufweisen 
+und daher einige Elektronen schon bei höheren Spannungen nicht mehr die Anode erreichen können. 
+Es ist aber auch festzusetellen, dass der Strom bei höheren Bremspannungen als $U_{\symup{g}}$ nicht komplett auf 0 abfällt. Stattdessen 
+wird ein geringer Gegenstrom erzeugt. Dieser lässt sich dadurch erklären, dass das Kathodenmaterial schon bei Raumtemperatur verdampft und
+sich das verdampfte Material an der Anode ablagert, wodurch sich auch hier ein geringer photoelektrischer Strom einstellt. An sich gilt, dass
+die Anode aus einem Material gefertigt ist, welches eine deutlich höhere Austrittsarbeit als das der Kathode aufweist. Da sich das Kathodenmaterial
+aber auf der Anode ablagert, wird die Austrittsarbeit an dieser geringer, womit sich vermuten lässt, dass sich der Wert der Austrittsarbeit
+an der Anode, dem an der Kathode annähert. Der geringe Sättigungsstrom, welcher sich schon bei geringen Bremspannungen einstellt,
+ist damit zu erklären, dass die Anode eine wesentlich geringere Oberfläche aufweist als die Kathode und der Photostrom daher schon bei 
+geringen Energien des Lichtes die Kathode erreichen können.

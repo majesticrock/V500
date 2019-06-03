@@ -18,7 +18,7 @@ farbe = ["blaugruen", "gelb","gruen","rot","violett1","violett2"]
 
 n=np.array([11,11,11,11,11,12])
 #Hier Werte der Beschleunigungsspannung
-wlaenge =  np.array([491.6, 577.0, 546, 614.95 , 435.8, 404.7])
+wlaenge =  np.array([491.6, 577.0, 546, 640, 435.8, 404.7])
 
 a = np.zeros(6)
 a_err = np.zeros(6)
@@ -31,7 +31,7 @@ ug = np.zeros(6)
 
 frequenz = 299792458 * 10**9 / wlaenge
  
-
+print(frequenz)
 for i in range(0, 6):
     werte = csv_read("csv/" + str(farbe[i]) +  ".csv")
 
