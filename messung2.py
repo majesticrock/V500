@@ -26,7 +26,7 @@ for values in werte:
 x_line = np.linspace(0, 1080)
 plt.plot(xdata, ydata,  "rx", label="Messwerte")
 
-
+plt.grid()
 plt.xlabel(r"$U$ / V")
 plt.ylabel(r"$I$ / A")
 

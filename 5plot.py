@@ -16,7 +16,7 @@ def func(x, a, b):
 
 farbe = ["blaugruen", "gelb","gruen","rot","violett1","violett2"]
 
-n=np.array([11,11,11,11,11,11])
+n=np.array([11,11,11,11,11,12])
 #Hier Werte der Beschleunigungsspannung
 wlaenge =  np.array([491.6, 577.0, 546, 614.95 , 435.8, 404.7])
 
@@ -41,7 +41,7 @@ for i in range(0, 6):
     for j in range(0, n[i]-1):
         xdata[j] = float(werte[j+1][1])
         ydata[j] = np.sqrt(float(werte[j+1][0]))
-        
+    print("sqrtI" + str(ydata))
     x0 =  float(werte[11][1])
     y0 =  np.sqrt(float(werte[11][0]))
     x_line = np.linspace(np.amin(xdata), np.amax(xdata))

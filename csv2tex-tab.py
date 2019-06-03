@@ -68,4 +68,4 @@ ub = [250, 300, 350, 400, 450]
 #csv2textable("csv/oszi.csv", "Frequenz der Sägezahnspannung und Multiplikator $n$, um die Frequenz der Sinusspannung zu erhalten.", "oszi", "S[table-format=3.2] S[table-format=1.1]")
 #
 #csv2textable("csv/magnet250v.csv", "$U_\text{B} = 250$ V", "magn1", "S[table-format=1.2] S[table-format=2.0]")
-#csv2textable("csv/magnet400v.csv", "$U_\text{B} = 400$ V", "magn2", "S[table-format=1.2] S[table-format=2.0]")
+csv2textable("csv/messung2.csv", "Messdaten der Messung im vergrößerten Bremsspektrum", "messung2", "c c")
