@@ -42,18 +42,19 @@ for i in range(0, 6):
         xdata[j] = float(werte[j+1][1])
         ydata[j] = np.sqrt(float(werte[j+1][0]))
     print("sqrtI" + str(ydata))
-    x0 =  float(werte[11][1])
-    y0 =  np.sqrt(float(werte[11][0]))
-    x_line = np.linspace(np.amin(xdata), np.amax(xdata))
+    x0 =  float(werte[n[i]][1])
+    y0 =  np.sqrt(float(werte[n[i]][0]))
+    
     plt.figure(i)
     plt.plot(xdata, ydata, "rx", label="Messwerte")
     plt.plot(x0, y0, "r.", label="Nicht beachtete Nullmessung")
+    plt.grid()
     popt, pcov = curve_fit(func, xdata, ydata)
     a[i] = popt[0]
     a_err[i] = np.sqrt(pcov[0,0])
     b[i] = popt[1]
     b_err[i] = np.sqrt(pcov[1,1])
-
+    x_line = np.linspace(np.amin(xdata), -popt[1]/popt[0])
     plt.plot(x_line, func(x_line, *popt), "b-", label="Fit")
     #a_i sind D/U_d
     #b_i sind nur Korrekturkoeffizienten

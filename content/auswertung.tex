@@ -2,7 +2,7 @@
 \label{sec:Auswertung}
 Zur Bestimmung der Austrittsarbeit $A_{\symup{K}}$ und des Verhältnisses $\frac{h}{e_0}$ werden zunächst die Grenzspannungen $U_{\symup{g}}$
 der gemessenen Spektrallinien errechnet. Dazu werden die Wurzeln der gemessenen Stromstärken $I$ gegen die Gegenspannungen $U$ aufgetragen.
-Die verwendeten Werte sind in \autoref{tab:tabelle1} bis \autoref{tab:tabelle6} aufgelistet. Für jede der ausgemessenen Spektrallinien wird mittels Python 3.7.0 Curve Fit
+Die verwendeten Werte sind in \autoref{tab:tabelle1} aufgelistet. Für jede der ausgemessenen Spektrallinien wird mittels des Python 3.7.0 Paketes Curve Fit
 eine lineare Ausgleichsrechnung der Form 
 \begin{equation}
 \label{eqn:ausgleich1}
@@ -23,7 +23,7 @@ durchgeführt. Die entsprechenden Fits sind in \autoref{fig:farben} zu sehen. Di
   a_{\symup{\lambda = 404,7 }} &= (-0,64 \pm 0,03) \, \frac{\sqrt{\symup{A}}}{\symup{V}} \\
   b_{\symup{\lambda = 404,7 }} &= (0,86 \pm 0,02) \,  \sqrt{\symup{A}}. \\
 \end{align*} 
-Zu erwähnen sei hierbei, dass die Nullmessung bei jedem Fit nicht beachtet wird, da diese wie in den Abbildungen zu sehen teilweise sehr 
+Zu erwähnen sei hierbei, dass die Nullmessung bei jedem Fit nicht beachtet wird, da diese, wie in den Abbildungen zu sehen, teilweise sehr 
 stark von den anderen Werten abweicht und diese Messung in der Durchführung bereits ungenau war.
 Die gesuchten Grenzspannungen $U_{\symup{g, i}}$ sind die Nullstellen der Fits an der Spannungsachse. Daher ergibt sich der Zusammenhang
 $U_{\symup{g, i}} = - \frac{b_{\symup{i}}}{a_{\symup{i}}}$, womit sich die Grenzspannungen zu 
@@ -72,7 +72,7 @@ ergeben.
     \includegraphics[width=0.98\textwidth]{build/violett2.pdf}
     \caption{Violett $\lambda = 404,7$ nm}
   \end{subfigure}
-  \caption{Plots der Wurzeln der Stromintensitäten $I$ gegen die Gegenspannung $U$ bei verschiedenen Wellenlängen $\lambda$ mit Ausgleichsgeraden.}
+  \caption{Plots der Wurzeln der Stromstärken $I$ gegen die Gegenspannung $U$ bei verschiedenen Wellenlängen $\lambda$ mit Ausgleichsgeraden.}
   \label{fig:farben}
 \end{figure}
 \input{../content/tabelle.tex}
@@ -90,11 +90,11 @@ Dabei wird eine lineare Ausgleichsrechung der Form
   \label{eqn:ausgleich2}
   U_{\symup{g}} = d \cdot f + b
 \end{equation}
-mittels Python 3.7.0 Curve Fit durchgeführt. Die abgetragenen Spannungen und der Fit sind in \autoref{fig:Grenzspannung} zu sehen.
+mittels des Python 3.7.0  Paktes Curve Fit durchgeführt. Die Grenzspannungen und die zugehörigen Frequenzen, sowie der Fit sind in \autoref{fig:Grenzspannung} zu sehen.
 Die gesuchten Parameter ergeben sich damit zu 
 \begin{align*}
-  & \frac{h}{e_0} = d               = (3,0 \pm 0,4) \cdot 10^{-15} \symup{Vs} \\
-  & A_{\symup{K}} = \lvert b \rvert = (0,9 \pm 0,2) \symup{eV}. \\
+  & \frac{h}{e_0} = d               = (3,0 \pm 0,4) \cdot 10^{-15} \, \symup{Vs} \\
+  & A_{\symup{K}} = \lvert b \rvert = (0,9 \pm 0,2) \, \symup{eV}. \\
 \end{align*}  
 
 \begin{figure}
@@ -118,21 +118,21 @@ Der Plot dieser Werte ist in \autoref{fig:messung2} zu sehen.
 \end{figure}
 Wie zu sehen, konvergiert die Bremsspannungskurve bei hohen Beschleunigungsspannungen gegen einen Grenzwert. Dieser
 kann damit erklärt werden, dass bei hohen Beschleunigungsspannungen
-annähernd alle Elektronen die Anode ereichen, die Kurve somit physikalisch gesehen nicht weiter ansteigen kann. Es können nicht mehr Elektronen 
+annähernd alle Elektronen die Anode erreichen, die Kurve somit physikalisch gesehen also nicht weiter ansteigen kann. Es können nicht mehr Elektronen 
 herausgelöst werden als es der Sättigungswert zulässt, da die Stromstärke proportional zur Lichtintensität ist, welche ebenfalls endlich ist. 
 Der tatsächliche Sättigungswert kann allerdings nicht erreicht werden, sondern nur asymptotisch angenähert werden. Dies liegt unter anderem daran,
 dass die Elektronen immer einer gewissen, wenn auch geringen Streuung unterworfen sind. Der Aufbau kann in dieser Hinsicht dadurch verbessert werden, 
 dass die Lichtquelle und die Photokathode in eine evakuierte kugelförmige Anode gebracht werden. Die Elektronen würden dadurch zwangsläufig 
 immer die Anode erreichen.
  
-Des Weiteren ist festzusetellen, dass der gemessene Photostrom bereits vor Erreichen der Grenzspannung $U_{\symup{g}}$ beginnt zu sinken.
+Des Weiteren ist festzusetellen, dass der gemessene Photostrom bereits vor Erreichen der Grenzspannung $U_{\symup{g}}$ zu sinken beginnt.
 Das ist dadurch zu erklären, dass die herausgelösten Elektronen laut der Fermi-Dirac-Statistik ein Spektrum an verschiedenen Energien aufweisen 
-und daher einige Elektronen schon bei höheren Spannungen nicht mehr die Anode erreichen können. 
+und daher einige Elektronen schon bei leicht niedrigeren Spannungen nicht mehr die Anode erreichen können. 
 Es ist aber auch festzusetellen, dass der Strom bei höheren Bremspannungen als $U_{\symup{g}}$ nicht komplett auf 0 abfällt. Stattdessen 
 wird ein geringer Gegenstrom erzeugt. Dieser lässt sich dadurch erklären, dass das Kathodenmaterial schon bei Raumtemperatur verdampft und
 sich das verdampfte Material an der Anode ablagert, wodurch sich auch hier ein geringer photoelektrischer Strom einstellt. An sich gilt, dass
 die Anode aus einem Material gefertigt ist, welches eine deutlich höhere Austrittsarbeit als das der Kathode aufweist. Da sich das Kathodenmaterial
 aber auf der Anode ablagert, wird die Austrittsarbeit an dieser geringer, womit sich vermuten lässt, dass sich der Wert der Austrittsarbeit
 an der Anode, dem an der Kathode annähert. Der geringe Sättigungsstrom, welcher sich schon bei geringen Bremspannungen einstellt,
-ist damit zu erklären, dass die Anode eine wesentlich geringere Oberfläche aufweist als die Kathode und der Photostrom daher schon bei 
-geringen Energien des Lichtes die Kathode erreichen können.
+ist damit zu erklären, dass die Anode eine wesentlich geringere Oberfläche aufweist als die Kathode. Der Photostrom kann daher schon bei 
+geringen Energien des Lichtes die Kathode erreichen.
